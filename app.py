@@ -46,7 +46,7 @@ def get_a_graph(inp):
     p1.xaxis.axis_label = 'Date'
     p1.yaxis.axis_label = 'Close Price'
     p1.line(df_s['time'], df_s['4. close'], color='#A6CEE3', legend_label=inp)
-    # save(p1, filename='templates/stock.html',resources=CDN,title='my plot')
+    save(p1, filename='templates/stock.html',resources=CDN,title='my plot')
     script, div = components(p1)
     return script, div
 
@@ -66,8 +66,8 @@ def index():
         return render_template('frontpg.html')
 
 if __name__ == '__main__':
-     app.debug=True
-     app.run(port=33507)
+      app.debug=True
+      app.run(port=33507)
 
 
 
